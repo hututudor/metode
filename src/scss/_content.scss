@@ -1,0 +1,108 @@
+.content {
+  margin-left: 30rem;
+  width: calc(100% - 30rem);
+
+  .container-2 {
+    padding: 4rem 10rem;
+    color: $cyan-900;
+
+    h1:first-child {
+      font-size: 4rem;
+      text-align: center;
+      padding-bottom: 4rem;
+    }
+
+    .text {
+      h2 {
+        font-size: 3rem;
+
+        span {
+          font-size: 3.5rem;
+          color: $yellow-400;
+        }
+      }
+
+      p {
+        font-size: 1.6rem;
+        padding: 0 2rem 0 3rem;
+        text-align: justify;
+        padding-bottom: 0.5rem;
+      }
+
+      table {
+        width: 100%;
+        border-radius: 0.7rem;
+        border: 1px solid $grey-900;
+        text-align: left;
+        margin: 0 2rem 0 3rem;
+        font-size: 1.4rem;
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+
+        thead {
+          font-weight: 700;
+        }
+      }
+
+      ul {
+        &:not(.sub) {
+          padding-bottom: 0.5rem;
+        }
+
+        li {
+          font-size: 1.6rem;
+          padding: 0 2rem 0 3rem;
+          text-align: justify;
+          list-style-type: none;
+
+          &:not(.sub)::before {
+            content: '';
+            display: inline-block;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 0.5rem;
+            background: $yellow-400;
+            margin-right: 1rem;
+          }
+        }
+      }
+    }
+
+    .card {
+      flex-grow: 1;
+      margin: 0 3rem;
+      padding: 1rem;
+      padding-left: 2rem;
+      background-color: $grey-100;
+      border-radius: 1rem;
+      cursor: pointer;
+      margin-bottom: 2rem; 
+
+      h3 {
+        font-size: 2.5rem;
+      }
+
+      h4 {
+        font-size: 1.5rem;
+        color: $cyan-700 !important;
+      }
+    }
+
+    button {
+      background: $cyan-700;
+      color: $grey-050;
+      padding: 1rem 3rem;
+      font-size: 1.5rem;
+      margin-left: 3rem;
+      border: none;
+      outline: none !important;
+      border-radius: 1rem;
+      transition: all 0.2s;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $cyan-900;
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+.sidebar {
+  height: 100vh;
+  width: 30rem;
+  background: $grey-600;
+  position: fixed;
+  color: $grey-050;
+  padding: 3rem 0;
+  text-align: center;
+  user-select: none;
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 6rem;
+  }
+
+  ul {
+    text-align: left;
+
+    li {
+      font-size: 1.4rem;
+
+      a {
+        display: block;
+        color: $grey-050;
+        text-decoration: none;
+        padding-left: 2rem !important;
+        padding: 0.8rem 0;
+      }
+
+      &.active {
+        border-left: 0.5rem solid $yellow-400 !important;
+        background: $grey-700;
+
+        a {
+          padding-left: 1.5rem !important;
+        }
+      }
+
+      &:hover {
+        background: $grey-700;
+      }
+    }
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: $grey-800;
+    padding: 2rem 0;
+
+    h2 {
+      font-size: 1.8rem;
+    }
+  }
+}

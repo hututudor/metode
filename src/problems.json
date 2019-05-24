@@ -1,0 +1,77 @@
+[
+  {
+    "name": "spectacole",
+    "desc": "Managerul artistic al unui festival trebuie sa selecteze o multime cat mai ampla de spectacole ce pot fi jucate in singura sala pe care o are la dispozitie.Stiind ca i s-au propus n spectacole si pentru fiecare spectacol i-a fost anuntat intervalul in care se poate desfasura [Si, Fi] (Si reprezinta ora si minutul de inceput, iar Fi ora si minutul de final al spectacolului i), scrieti un program care sa permita spectatorilor vizionarea unui numar cat mai mare de spectacole.",
+    "din": "Pe prima linie a fisierului de intrare spectacole.in se afla numarul n, numarul de spectacole propus. Pe urmatoarele n linii se vor afla 4 valori, primele doua reprezentand ora si minutul inceperii spectacolului curent, iar ultimele doua reprezentand ora si minutul terminarii spectacolului.",
+    "dout": "Fisierul de iesire spectacole.out contine o singura linie, pe aceasta vor fi scrise numerele de ordine ale spectacolelor care indeplinesc solutia problemei, printr-un spatiu.",
+    "res": ["n <= 100"],
+    "in": [
+      "5",
+      "12 30 16 30 15",
+      "0 18 0 10 0",
+      "18 30 18 0 20",
+      "45 12 15 13 0"
+    ],
+    "out": ["5 2 4"],
+    "dsol": "Vom sorta crescator spectacolele dupa ora de final. Vom selecta initial primul spectacol (cel care se termina cel mai devreme). In continuare vom selecta, la fiecare pasa, primul spectacol neselectat, care nu se suprapune peste cele deja selectate. O implementare intuitiva a acestui algoritm va fi prezentata in continuare. Pentru sortat vom folosi metoda BubbleSort, care este indeajuns de buna pentru limitele impuse de problema.",
+    "type": "greedy"
+  },
+  {
+    "name": "rucsac",
+    "desc": "Într-un magazin sunt n obiecte; pentru fiecare se cunoaște greutatea G și valoarea V. Un hoț intră în magazin având un rucsac ce poate transporta o greutate maximă GMax. El va fura anumite obiecte, sau porțiuni de obiecte, astfel încât suma greutăților obiectelor furate să nu depășească GMax. Să se stabilească câștigul maxim pe care îl poate obține hoțul. Câștigul este egal cu suma valorilor obiectelor furate. Câștigul adus de o fracțiune de obiect este direct proporțional cu greutatea fracțiunii.",
+    "din": "Programul citește de la tastatură numerele naturale n GMax, iar apoi n perechi de valori G V, reprezentând greutatea, respectiv valoarea fiecărui obiect.",
+    "dout": "Programul va afișa pe ecran numărul C, reprezentând câștigul maxim pe care îl poate obține hoțul.",
+    "res": [
+      "1 ≤ n ≤ 1000",
+      "1 ≤ GMax, G, V ≤ 10000",
+      "rezultatul va fi punctat dacă diferența dintre cel afișat de program și cel corect este mai mică decât 0.0"
+    ],
+    "in": ["4 30", "10 60", "5 50", "12 60", "20 140"],
+    "out": ["220"],
+    "dsol": "Hoțul va lua obiectele 2 și  4 în întregime și jumătate din obiectul 1, obținând un câștig de 220.",
+    "type": "greedy"
+  },
+  {
+    "name": "saritura_cal",
+    "desc": "Se consideră o tablă de şah cu n linii şi m coloane. La o poziţie dată se află un cal de şah, acesta putându-se deplasa pe tablă în modul specific acestei piese de şah (în L). Să se determine o modalitate de parcurgere a tablei de către calul dat, astfel încât acesta să nu treacă de două ori prin aceeaşi poziţie. Parcurgerea constă într-o matrice cu n linii și m coloane, fiecare element al matricei având valoarea pasului la care se ajunge în acel element, sau 0, dacă nu s-a ajuns.",
+    "din": "Fișierul de intrare saritura_calului1.in conține numerele n şi m , apoi numere x y, reprezentând dimensiunile tablei (numărul de linii şi numărul de coloane) , respectiv coordonatele iniţiale ale calului (linie, coloana).",
+    "dout": "Fișierul de ieșire saritura_calului1.out va conține n linii cu câte m numere naturale cuprinse între 1 și n*m, separate prin exact un spațiu, reprezentând parcurgerea solicitată.",
+    "res": [
+      "1 ≤ n,m ≤ 100",
+      "1 ≤ istart ≤ n",
+      "1 ≤ jstart ≤ m"
+    ],
+    "in": ["4 5 1 1"],
+    "out": ["1 12 7 16 3 ", "6 17 2 11 8", "13 10 19 4 15", "18 5 14 9 20"],
+    "dsol": "Parcurgerea este completă, se va acorda 100% din punctaj.",
+    "type": "greedy"
+  },
+  {
+    "name": "masini",
+    "desc": "În curtea unui atelier de reparaţii auto, sunt n maşini care trebuie sa fie reparate. Deoarece nu sunt suficienţi mecanici, în fiecare moment de timp se poate lucra doar la o singură maşină.",
+    "din": "Pe prima linie a fişierului masini.in se găsec două numere naturale nşi T separate printr-un singur spaţiu, reprezentând numărul de maşini din curtea atelierului auto şi timpul total în care se va lucra. Pe linia a doua, separate prin câte un spaţiu, se găsesc n numere naturale t1, t2, …, tn, reprezentând timpii necesari pentru repararea fiecărei maşini.",
+    "dout": "Pe prima linie a fişierului masini.out se va găsi un număr natural k, reprezentând numărul maxim de maşini care pot fi reparate.",
+    "res": [
+      "1 < n, T <= 1000",
+      "numerele de pe a doua linie a fişierului de intrare vor fi mai mici sau egale cu 100"
+    ],
+    "in": [
+      "5 10",
+      "6 2 4 8 2"
+    ],
+    "out": ["3"],
+    "dsol": "Se vor repara masinile 2, 3 şi 5, cu timpii de reparaţie 2, 4 şi 2.",
+    "type": "greedy"
+  },
+  {
+    "name": "permutari",
+    "desc": " Fie n numar natural nenul. Scrieti un program de generare a permutarilor de ordin n a elementelor multimii {1, 2, 3,..., n}.",
+    "din": "Pe prima linie a fisierului se afla numarul n, reprezentand ordinul permutarilor.",
+    "dout": "Fisierul de iesire va contine permutarile generate.",
+    "res": ["n <= 15"],
+    "in": ["2"],
+    "out": ["1 2", "2 1"],
+    "dsol": "Permutarile de ordin n reprezinta toate posibilitatile de a aranja elementele unei multimi de n elemente.",
+    "type": "backtracking"
+  }
+]
